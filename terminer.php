@@ -22,7 +22,7 @@ if (isset($_SESSION['liste_termine'])===false){
 
     }
 
-    // je parcourt liste tache, et lorsque la position demandé correspond a celle du tableau($pos=$posiiton), j'ajoute la valeur correspondant au tableau terminé
+    // je parcours liste tache, et lorsque la position demandé correspond a celle du tableau($pos=$posiiton), j'ajoute la valeur correspondant au tableau terminé
 // et je supprime la tache de la liste des choses à faire (liste taches)
     foreach ($_SESSION['liste_taches'] as $pos => $tache) {
   
