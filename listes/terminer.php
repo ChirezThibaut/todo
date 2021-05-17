@@ -35,4 +35,3 @@ if (isset($_SESSION['liste_termine'])===false){
     
 }
 header('location:liste_termine.php');
-azeaaze
