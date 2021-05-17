@@ -25,7 +25,7 @@ try {
         echo "<h2 style='color: red'>Une erreur c'est produite</h2>";
         exit;
     }
-    if ($pdosth->rowCount() === 1) {
+    if ($pdosth->rowCount() === 0) {
         echo "<h2 style='color: red'>Utilisateur inconnu</h2>";
         exit;
     }

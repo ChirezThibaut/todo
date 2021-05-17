@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-//si on arrive sur la page, c'est que la tache est terminé
+//si on arrive sur la page, c'est que la tache est terminée
 //on redirige vers une page avec la liste des taches terminées, et on supprime la tache de la liste_tache
 
 //donc on recupere la tache avec la position depuis liste_taches, on la fait entré dans tableau tache_terminé, et on supprime tache de liste_taches

@@ -27,9 +27,9 @@ try {
         ':password' => hash('sha256',$_POST['password']),
 
     ]);
-    // on va reuperer les lignes de la bdd affecté, pour savoir si ca c'est bien deroulé
+    // on va recuperer les lignes de la bdd affecté, pour savoir si ca c'est bien deroulé
     if ($result && $pdosth->rowCount() == 1) {
-        header('inscription.php');
+        header('connexion.php');
         exit;
     }
 } catch (Exception $e) {

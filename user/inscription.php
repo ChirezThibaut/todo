@@ -34,7 +34,7 @@
         Déjà inscrit?
       </a>
       <div class="test">
-        <input type="submit" value="Connexion">
+        <input type="submit" value="Inscription">
       </div>
     </form>
   </div>
