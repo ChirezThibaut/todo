@@ -9,7 +9,7 @@ if (
 ) {
     echo "<div style='center'>";
     echo "<h3>Des informations sont manquantes ! </h>";
-    echo "<a href='inscription.php'>Retour à l'inscription</a>";
+    echo "<a href='user/inscription.php'>Retour à l'inscription</a>";
     echo "</div>";
 }
 

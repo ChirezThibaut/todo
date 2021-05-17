@@ -8,7 +8,7 @@ if (
     (empty($_POST['username']) ||
         empty($_POST['password']))
 ) {
-    header('location:connexion.php');
+    header('location:user/connexion.php');
     exit;
 }
 try {

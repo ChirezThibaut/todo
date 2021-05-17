@@ -13,11 +13,7 @@
   <div class="container mt-5" >
 
 
-    <form action="sauvegardeInscription.php" method="POST">
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" name="email" id="email">
-      </div>
+    <form action="user/checkConnexion.php" method="POST">
       <div class="mb-3">
         <label for="username" class="form-label">Pseudo</label>
         <input type="text" class="form-control" name="username" id="username">
@@ -26,8 +22,8 @@
         <label for="password" class="form-label">Mot de passe</label>
         <input type="password" class="form-control" name="password" id="password">
       </div>
-      <button type="submit" class="btn btn-primary">Envoyer</button>
-      <button formaction="connexion.php" class="btn btn-primary">Déjà inscris?</button>
+      <button type="submit" class="btn btn-primary">Connexion</button>
+      <button formaction="user/inscription.php" class="btn btn-primary">Pas encore inscrit?</button>
     </form>
   </div>
 </body>
