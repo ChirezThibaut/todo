@@ -2,17 +2,18 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../node_modules\bootstrap\dist\css\bootstrap.min.css">
+    
+    <link rel="stylesheet" href="..\CSS\formulaire.css">
 
-    <title>Hello, world!</title>
+    <title>Liste des tâches terminées</title>
 </head>
 
 <body>
+    
     <?php
     session_start();
     if (isset($_SESSION['user']) === false) {
@@ -22,15 +23,20 @@
     if (isset($_SESSION['liste_termine'])) {
 
         foreach ($_SESSION['liste_termine'] as $position => $tache) {
-
-            echo '<li class="list-group mt-2">';
+            echo '<div class="user-box"><ul>';
+            echo '<li>';
             echo ($position + 1) . ' : ' . $tache['tache'];
-            echo '</li>';
+            echo '</li></ul></div>';
         }
     }
-    echo '<a href="liste_taches.php">Retour à la liste</a>' . ' ou ' . '<a href="addTask.php"> Ajouter une nouvelle tâche </a>';
-    echo '<div>';
-    echo "<a href='../deconnexion.php'>Deconnexion</a>";
+
+    
+    echo '<div class="user-box">';
+    echo '<a href="liste_taches.php">Retour à la liste</a>';
+    echo '<a href="addTask.php"> Ajouter une nouvelle tâche </a>';
+    echo '</div>';
+    echo '<div class="user-box">';
+    echo "<a href='../user/deconnexion.php'>Deconnexion (/!\ vous perdrez votre liste!)</a>";
     echo '</div>';
 
 

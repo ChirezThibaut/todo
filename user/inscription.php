@@ -6,28 +6,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./node_modules\bootstrap\dist\css\bootstrap.min.css">
+  <link rel="stylesheet" href="..\CSS\formulaire.css">
+
 </head>
 
 <body>
-  <div class="container mt-5" >
+  <div class="login-box">
 
-
-    <form action="user/sauvegardeInscription.php" method="POST">
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" name="email" id="email">
+<h2>Inscription</h2>
+    <form action="sauvegardeInscription.php" method="POST">
+      <div class="user-box">
+        
+        <input type="email" name="email" id="email" required="">
+        <label>Email</label>
       </div>
-      <div class="mb-3">
-        <label for="username" class="form-label">Pseudo</label>
-        <input type="text" class="form-control" name="username" id="username">
+      <div class="user-box">
+       
+        <input type="text" name="username" id="username" required="">
+        <label>Pseudo</label>
       </div>
-      <div class="mb-3">
-        <label for="password" class="form-label">Mot de passe</label>
-        <input type="password" class="form-control" name="password" id="password">
+      <div class="user-box">
+        
+        <input type="password" name="password" id="password" required="">
+        <label>Mot de passe</label>
       </div>
-      <button type="submit" class="btn btn-primary">Envoyer</button>
-      <button formaction="user/connexion.php" class="btn btn-primary">Déjà inscris?</button>
+      <a href="Connexion.php">
+        Déjà inscrit?
+      </a>
+      <div class="test">
+        <input type="submit" value="Connexion">
+      </div>
     </form>
   </div>
 </body>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('config/connexion_bdd.php');
+require_once('../config/connexion_bdd.php');
 //on verifie email et password, qu'ils sont bien present et comforme
 if (
     isset($_POST['username'], $_POST['password']) === false ||
@@ -8,7 +8,7 @@ if (
     (empty($_POST['username']) ||
         empty($_POST['password']))
 ) {
-    header('location:user/connexion.php');
+    header('location:connexion.php');
     exit;
 }
 try {
@@ -25,7 +25,7 @@ try {
         echo "<h2 style='color: red'>Une erreur c'est produite</h2>";
         exit;
     }
-    if ($pdosth->rowCount() === 0) {
+    if ($pdosth->rowCount() === 1) {
         echo "<h2 style='color: red'>Utilisateur inconnu</h2>";
         exit;
     }
@@ -35,6 +35,6 @@ try {
     unset($utilisateur['password']);
     // et on stock ensuite l'utilisatuer dans la session, si il est stocké, c'est qu'il est connecté, si pas il faut qu'un utilisateur se connecte
     $_SESSION['user'] = $utilisateur;;
-    header('location:index.php');
+    header('location:/index.php');
 } catch (Exception $e) {
 }

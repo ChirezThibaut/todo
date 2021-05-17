@@ -1,5 +1,5 @@
 <?php
-require_once('config/connexion_bdd.php');
+require_once('../config/connexion_bdd.php');
 
 if (
     isset($_POST['email'], $_POST['username'], $_POST['password']) === false ||
@@ -9,7 +9,7 @@ if (
 ) {
     echo "<div style='center'>";
     echo "<h3>Des informations sont manquantes ! </h>";
-    echo "<a href='user/inscription.php'>Retour à l'inscription</a>";
+    echo "<a href='inscription.php'>Retour à l'inscription</a>";
     echo "</div>";
 }
 

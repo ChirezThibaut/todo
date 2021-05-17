@@ -11,32 +11,35 @@ if (isset($_SESSION['user']) === false) {
 <html lang="en">
 
 <head>
-  <title>Title</title>
-  <!-- Required meta tags -->
+  <title>To Do List</title>
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="../node_modules\bootstrap\dist\css\bootstrap.min.css">
+
+  <link rel="stylesheet" href="..\CSS\formulaire.css">
 </head>
 
 <body>
-  <h1>To Do List:</h1>
-  <form class="row g-3" action="sauvegarde.php" method="post">
-    <div class="col-auto">
-      Ajouter une tâche à la to do list:
+  <div class="login-box">
+    <h2>To Do List:</h2>
+    <form action="sauvegarde.php" method="post">
+      <div class="user-box">
+        <input type="text" name="tache" required="">
+        <label>Ajouter une tâche</label>
+      </div>
 
-    </div>
-    <div class="col-auto">
-      <input type="text" class="form-control" name="tache" placeholder="Exemple">
-    </div>
-    <div class="col-auto">
-      <button type="submit" class="btn btn-success">Ajouter</button>
+      <div class="test">
+        <input type="submit" value="Ajouter">
 
-    </div>
-    <div>
-      <a href='../deconnexion.php'>Deconnexion</a>
-    </div>
-  </form>
-
+      </div>
+      <div class="user-box">
+        <a href='../user/deconnexion.php'>Deconnexion (/!\ vous perdrez votre liste!)</a>
+      </div>
+      
+    </form>
+  </div>
+  <div class="user-box">
+        <a href='../listes/liste_taches.php'>Acceder à la liste des tâches</a>
+      </div>
 </html>

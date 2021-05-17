@@ -6,24 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./node_modules\bootstrap\dist\css\bootstrap.min.css">
+  <link rel="stylesheet" href="..\CSS\formulaire.css">
+
+
 </head>
 
 <body>
-  <div class="container mt-5" >
+  <div class="login-box">
+    <h2>Connexion</h2>
 
+    <form action="checkConnexion.php" method="POST">
+      <div class="user-box">
+        <input type="text" name="username" id="username" required="">
+        <label>Pseudo</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="password" id="password" required="">
+        <label>Mot de passe</label>
+      </div>
+      <a href="inscription.php">
+        Pas encore inscrit?
+      </a>
+      <div class="test">
+        <input type="submit" value="Connexion">
+      </div>
 
-    <form action="user/checkConnexion.php" method="POST">
-      <div class="mb-3">
-        <label for="username" class="form-label">Pseudo</label>
-        <input type="text" class="form-control" name="username" id="username">
-      </div>
-      <div class="mb-3">
-        <label for="password" class="form-label">Mot de passe</label>
-        <input type="password" class="form-control" name="password" id="password">
-      </div>
-      <button type="submit" class="btn btn-primary">Connexion</button>
-      <button formaction="user/inscription.php" class="btn btn-primary">Pas encore inscrit?</button>
     </form>
   </div>
 </body>
