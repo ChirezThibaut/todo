@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    
+<h2 style="color:#517467">Listes des tâches terminées:</h2>
     <?php
     session_start();
     if (isset($_SESSION['user']) === false) {
