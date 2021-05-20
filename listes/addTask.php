@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_SESSION['user']) === false) {
-  header('location: connexion.php');
+  header('location: ../user/connexion.php');
   exit;
 }
 ?>
@@ -40,6 +40,6 @@ if (isset($_SESSION['user']) === false) {
     </form>
   </div>
   <div class="user-box">
-        <a href='../listes/liste_taches.php'>Acceder à la liste des tâches</a>
+        <a href='../listes/taskList.php'>Acceder à la liste des tâches</a>
       </div>
 </html>

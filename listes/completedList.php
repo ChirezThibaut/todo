@@ -20,9 +20,9 @@
         header('location: connexion.php');
         exit;
     }
-    if (isset($_SESSION['liste_termine'])) {
+    if (isset($_SESSION['completedList'])) {
 
-        foreach ($_SESSION['liste_termine'] as $position => $tache) {
+        foreach ($_SESSION['completedList'] as $position => $tache) {
             echo '<div class="user-box"><ul>';
             echo '<li>';
             echo ($position + 1) . ' : ' . $tache['tache'];
@@ -32,7 +32,7 @@
 
     
     echo '<div class="user-box">';
-    echo '<a href="liste_taches.php">Retour à la liste</a>';
+    echo '<a href="taskList.php">Retour à la liste</a>';
     echo '<a href="addTask.php"> Ajouter une nouvelle tâche </a>';
     echo '</div>';
     echo '<div class="user-box">';
@@ -40,5 +40,5 @@
     echo '</div>';
 
 
-    //recuperer la liste_termine, et la parocurire avec for each
+    //recuperer la completedList, et la parocurire avec for each
     ?>

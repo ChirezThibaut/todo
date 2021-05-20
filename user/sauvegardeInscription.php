@@ -22,14 +22,14 @@ try {
     // on dit que :email,etc doit etre remplacé par ce que l'utilisateur envoit dans le formulaire (sous forme hasher, pour qu'il ne soit pas lisible(sha256 est le type de hash))
     // on peut rajouter un salt au hash, pour eviter que par exemple, 2 mdp identiques aient le meme hashage
     $result = $pdosth->execute([
-        ':email' => hash('sha256', $_POST['email']),
-        ':username' => hash('sha256',$_POST['username']),
+        ':email' => $_POST['email'],
+        ':username' => $_POST['username'],
         ':password' => hash('sha256',$_POST['password']),
 
     ]);
     // on va recuperer les lignes de la bdd affecté, pour savoir si ca c'est bien deroulé
     if ($result && $pdosth->rowCount() == 1) {
-        header('connexion.php');
+        header('location: connexion.php');
         exit;
     }
 } catch (Exception $e) {

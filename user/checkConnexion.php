@@ -16,7 +16,7 @@ try {
     //cette fois, on n'ajoute pas mais on va selectionner un utilisateur
     $result = $pdosth->execute([
 
-        ':username' => $_POST['username'],
+        ':username' => strtolower ($_POST['username']),
         ':password' => hash('sha256', $_POST['password']),
 
     ]);
@@ -35,6 +35,6 @@ try {
     unset($utilisateur['password']);
     // et on stock ensuite l'utilisatuer dans la session, si il est stocké, c'est qu'il est connecté, si pas il faut qu'un utilisateur se connecte
     $_SESSION['user'] = $utilisateur;;
-    header('location:/index.php');
+    header('location: ../index.php');
 } catch (Exception $e) {
 }

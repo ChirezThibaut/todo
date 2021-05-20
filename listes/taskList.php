@@ -19,9 +19,9 @@
     exit;
   }
 
-  if (isset($_SESSION['liste_taches'])) {
+  if (isset($_SESSION['taskList'])) {
 
-    foreach ($_SESSION['liste_taches'] as $position => $tache) {
+    foreach ($_SESSION['taskList'] as $position => $tache) {
       echo '<div class="user-box">' . '<ul>';
       echo '<li>';
       echo $position . ' : ' . $tache['tache'];
@@ -34,7 +34,7 @@
  echo'<div class="user-box">';
   echo '<a href="addTask.php"> Ajouter une nouvelle tâche </a>';
   echo '<a href="../user/deconnexion.php">Deconnexion (/!\ vous perdrez votre liste!)</a>';
-  echo '<a href="../listes/liste_termine.php">Tâches terminées</a>';
+  echo '<a href="../listes/completedList.php">Tâches terminées</a>';
   echo'</div> ';
       
      
