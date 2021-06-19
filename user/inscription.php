@@ -9,24 +9,25 @@
   <link rel="stylesheet" href="..\CSS\formulaire.css">
 
 </head>
+<!--Creation du formulaire d'inscription-->
 
 <body>
   <div class="login-box">
 
-<h2>Inscription</h2>
-    <form action="sauvegardeInscription.php" method="POST">
+    <h2>Inscription</h2>
+    <form action="saveInscription.php" method="POST">
       <div class="user-box">
-        
+
         <input type="email" name="email" id="email" required="">
         <label>Email</label>
       </div>
       <div class="user-box">
-       
+
         <input type="text" name="username" id="username" required="">
         <label>Pseudo</label>
       </div>
       <div class="user-box">
-        
+
         <input type="password" name="password" id="password" required="">
         <label>Mot de passe</label>
       </div>

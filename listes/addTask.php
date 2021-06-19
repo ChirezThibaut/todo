@@ -1,12 +1,12 @@
 <?php
 session_start();
-
+//Verification que l'utilisateur est bien connecté, sinon on le redirige
 if (isset($_SESSION['user']) === false) {
   header('location: ../user/connexion.php');
   exit;
 }
 ?>
-
+<!-- Formulaire d'ajout d'une nouvelle tâche-->
 <!doctype html>
 <html lang="en">
 
@@ -39,7 +39,7 @@ if (isset($_SESSION['user']) === false) {
       
     </form>
   </div>
-  <div class="user-box">
-        <a href='../listes/taskList.php'>Acceder à la liste des tâches</a>
+  <div>
+        <a href='../listes/taskList.php' class="hostNewTask">Acceder à la liste des tâches</a>
       </div>
 </html>
